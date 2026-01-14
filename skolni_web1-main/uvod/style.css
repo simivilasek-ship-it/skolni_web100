@@ -1,0 +1,143 @@
+:root {
+  --bg: #fdfcfc;
+  --card-bg: #fdfbfb; /* tmavé bubliny */
+  --text: #000000; /* světlý text */
+  --accent-blue: #4da3ff; /* zvýraznění */
+  --accent-green: #faf8f8;
+  --accent-blue: #fcf9f9;
+  --header-bg: #000000;
+  --header-text: #fdfcfc;
+  --table-border: #fcf8f8;
+  --round: 12px;
+  --shadow: 0 4px 15px rgba(23, 19, 19, 0.905);
+  --trans: 0.25s ease;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+h2 {
+    font-size: larger;
+  color: #ffffff;
+}
+h3 {
+    margin: 0;
+    font-size: small;
+    color:#faf8f8
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
+  justify-content: center;
+}
+nav li {
+  margin: 0;
+}
+nav a {
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a.active {
+  text-decoration: underline;
+}
+main {
+  max-width: 1200px; /* širší pro 3 karty vedle sebe */
+  margin: 40px auto;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--round);
+  box-shadow: var(--shadow);
+} /* KONTEJNER KAPITOL – GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 vedle sebe */
+  gap: 20px; /* mezery mezi kartami */
+  margin-top: 30px;
+}
+a {
+  text-decoration: none; /* odstraní podtržení */
+  color: inherit; /* zachová barvu textu rodiče */
+} /* případně při hoveru */
+a:hover {
+  color: var(--accent-blue); /* nebo jiná barva při najetí */
+  text-decoration: none; /* pořád žádné podtržení */
+} /* KARTY */
+.container > div {
+  background: var(--card-bg);
+  border-radius: var(--round);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform var(--trans), box-shadow var(--trans);
+} /* Hover efekt */
+.container > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+} /* NADPIS KARTY */
+.container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--accent-blue);
+} /* SEZNAM PODNADPISŮ */
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container li {
+  margin: 8px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent-blue);
+} /* RESPONSIVE – mobil pod sebou */
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr; /* 1 karta pod sebou */
+  }
+}
+
+img {
+    margin-bottom: 40px;
+  max-width: 100%;
+  height: auto;
+}
+main img {
+    display: block;
+    margin: 50px auto; /* velká mezera pod obrázkem */
+}
+
+/* footer,
+div:last-of-type {
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 0.9rem;
+} */
+.footer { 
+    text-align: center; 
+    padding: 20px; 
+    color: rgba(7, 7, 7, 0.801); 
+    background-color: rgb(255, 255, 255); 
+    font-size: 0.9rem;
+}
+.container > div {
+  text-align: center;
+}

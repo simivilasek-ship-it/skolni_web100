@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Programové a datové soubory</title>
+</head>
+
+<body>
+
+    <header>
+        <h1> Programové a datové soubory</h1>
+        <nav>
+            <ul>
+                <li><a href="../uvod/index.html">Úvodní stránka</a></li>
+                <li><a href="../a/index.html">Programové a datové soubory</a></li>
+                <li><a href="../b/index.html">Operační systémy</a></li>
+                <li><a href="../c/index.html">Ovladače, firmware a utility</a></li>
+                <li><a href="../d/index.html">Aplikační software</a></li>
+                <li><a href="../e/index.html">Instalace programů</a></li>
+                <li><a href="../f/index.html">Softwarové licence</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Soubory a adresáře</h2>
+        <p>
+            <strong>Soubor (file)</strong> je množina souvisejících dat uložených na diskové jednotce. Název souboru je obvykle tvořen jménem (ve Windows až 254 znaků) a příponou, která naznačuje <strong>typ souboru</strong>. K dalším vlastnostem souboru
+            patří jeho velikost, autor (vlastník), datum vytvoření, datum změny, atributy, přístupová práva apod
+        </p>
+        <h2>Systém adresářů</h2>
+        <p>
+            K přehlednější práci se soubory slouží systém
+            <strong>adresářů</strong> či složek (directories, folders). Adresáře tvoří na disku typicky hierarchickou strukturu (tree - strom); základem je tzv. kořenový adresář (root) označený symbolem „/“ (<a href="https://en.wikipedia.org/wiki/Unix"
+                target="_blank">Unix</a> , Linux), nebo „\“ (Windows). Každý adresář může obsahovat soubory i podadresáře (subdirectories)
+        </p>
+        <p>
+            Cesta (path) vyjadřuje umístění souboru vždy směrem od nejvyššího adresáře: C:\XAMPP\mysql\bin\mysql.exe. Pro operace se soubory využíváme někdy zástupné znaky (wildcards):
+        </p>
+        <ul>
+            <li>
+                ▫ symbol <mark><code>*</code></mark> nahrazuje v názvu libovolný počet znaků (např. *.*);
+            </li>
+            <li>
+                ▫ symbol <code>?</code> nahrazuje jeden libovolný znak (např. s?s.txt).
+            </li>
+        </ul>
+        <h2>Programové soubory</h2>
+        <p>
+            Obsahují instrukce, podle nichž procesor ve spolupráci s dalšími hardwarovými komponentami plní konkrétní úlohy. Mohou být uloženy v již zkompilované binární podobě (nejčastěji ve
+            <strong>strojovém kódu</strong> pro danou platformu), nebo ve
+            <strong>zdrojovém kódu</strong>, obsahujícím příkazy určitého programovacího jazyka. Mezi programové soubory můžeme zařadit také skripty, soubory instrukcí v textové podobě, které ke svému spuštění vyžadují speciální program - interpret.
+        </p>
+        <h2> Programové knihovny</h2>
+        <p>
+            Větší programy jsou tvořeny
+            <strong> programovými knihovnami</strong> (runtime libraries), speciálními soubory s připravenými funkcemi, které programy využívají pro svůj běh. Ve Windows to jsou např. soubory DRV a SYS (obsahující zejména ovladače čili drivery, ale i
+            systémové funkce), nebo také
+            <strong>DLL</strong> (dynamic linking library - dynamicky linkované knihovny), které mohou být podle potřeby za běhu (dynamicky) připojeny k jednomu i více programům.
+        </p>
+        <h2>Spustitelné soubory a rezidentní programy</h2>
+        <p> Spustitelné soubory (executable files) obsahují kód, který je přímo vykonáván procesorem. Rezidentní programy (resident programs) jsou programy, které zůstávají v paměti počítače i po ukončení své činnosti a mohou být znovu aktivovány bez nutnosti
+            jejich opětovného načítání z disku.</p>
+
+        <h2>Datové soubory</h2>
+        <p>Datové soubory obsahují data různého charakteru (číselné, textové, grafické, zvukové údaje). K jejich zpracování se používají konkrétní programy, a proto jsou často přípony těchto datových souborů aso ciovány (propojeny) s určitou aplikací (např.
+            DOCX s programem MS Word, nebo XLSX s programem MS Excel.</p>
+        <figure>
+            <img src="../a/obrazek3.png" alt="Uúkázka použití wildcards v příkazovém řádku.">
+
+        </figure>
+
+    </main>
+    <footer>
+        <div style="text-align: center;">
+            <a href="https://www.sspu-opava.cz/cs/" target="_blank">
+                <img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Logo školy">
+            </a>
+        </div>
+        <div><strong>&copy; Copyright 2025, Simon Vilášek, IT1 </strong></div>
+    </footer>
+</body>
+
+</html>

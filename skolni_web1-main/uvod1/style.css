@@ -1,0 +1,147 @@
+:root {
+    --bg: #f4f6f8;
+    --card-bg: #ffffff;
+    --text: #1b1b1b;
+    --accent-red: #ff6b6b;
+    --accent-green: #020202;
+    --accent-blue: #000000;
+    --header-bg: #1f1f1f;
+    --header-text: #ffffff;
+    --table-border: #d0d4d8;
+    --round: 12px;
+    --shadow: 0 4px 15px rgba(23, 19, 19, 0.905);
+    --trans: 0.25s ease;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px; /* širší pro 3 karty vedle sebe */
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--round);
+    box-shadow: var(--shadow);
+}
+
+/* KONTEJNER KAPITOL – GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 vedle sebe */
+    gap: 20px; /* mezery mezi kartami */
+    margin-top: 30px;
+}
+a {
+    text-decoration: none; /* odstraní podtržení */
+    color: inherit;        /* zachová barvu textu rodiče */
+}
+
+/* případně při hoveru */
+a:hover {
+    color: var(--accent-blue); /* nebo jiná barva při najetí */
+    text-decoration: none;     /* pořád žádné podtržení */
+}
+
+
+/* KARTY */
+.container > div {
+    background: var(--card-bg);
+    border-radius: var(--round);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform var(--trans), box-shadow var(--trans);
+}
+
+/* Hover efekt */
+.container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* NADPIS KARTY */
+.container h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--accent-blue);
+}
+
+/* SEZNAM PODNADPISŮ */
+.container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container li {
+    margin: 8px 0;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+/* RESPONSIVE – mobil pod sebou */
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 karta pod sebou */
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer img {
+    width: 130px;
+}
+
+footer,
+div:last-of-type {
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    font-size: 0.9rem;
+}

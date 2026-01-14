@@ -1,0 +1,175 @@
+/* ====== Globální nastavení ====== */
+
+:root {
+    --bg: #f4f6f8;
+    --card-bg: #ffffff;
+    --text: #1b1b1b;
+    --accent-red: #ff6b6b;
+    --accent-green: #020202;
+    --accent-blue: #4dabf7;
+    --header-bg: #1f1f1f;
+    --header-text: #ffffff;
+    --table-border: #d0d4d8;
+    --round: 12px;
+    --shadow: 0 4px 15px rgba(23, 19, 19, 0.905);
+    --trans: 0.25s ease;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* ====== Hlavička ====== */
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+
+/* ====== Obsah ====== */
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--round);
+    box-shadow: var(--shadow);
+}
+
+h2,
+h3 {
+    margin-top: 30px;
+    color: #222;
+}
+
+
+/* ====== Tabulka ====== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: var(--round);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+th {
+    background: #2c2c2c;
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 20px;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background: #f1f3f5;
+}
+
+
+/* ====== Barevné buňky ====== */
+
+.bgred {
+    background: #ffe3e3;
+    border-left: 6px solid var(--accent-red);
+}
+
+.bgblue {
+    background: #e3f0ff;
+    border-left: 6px solid var(--accent-blue);
+}
+
+td:hover {
+    background: #fafbfc;
+    transition: var(--trans);
+}
+
+
+/* obecné obrázky */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* logo */
+
+footer img {
+    width: 130px;
+}
+
+
+/* screenshot */
+
+.screenshot {
+    width: 700px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* ====== Patička ====== */
+
+footer,
+div:last-of-type {
+    text-align: center;
+    padding: 20px;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+header {
+    background: #1f1f1f;
+    color: white;
+    padding: 20px;
+}
+
+
+/* navigace */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* 🔑 TADY */
+    gap: 20px;
+    /* mezery mezi položkami */
+    padding: 0;
+    margin: 10px 0 0 0;
+    justify-content: center;
+    /* vycentrování */
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
